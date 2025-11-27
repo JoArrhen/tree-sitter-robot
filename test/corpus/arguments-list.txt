@@ -16,7 +16,8 @@ Keyword With List Args
     (keywords_section
       (section_header)
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (keyword_setting
             (keyword_setting_name)
@@ -30,7 +31,8 @@ Keyword With List Args
                     (variable_name))))))
           (statement
             (keyword_invocation
-              (keyword)
+              (keyword
+                (text_chunk))
               (arguments
                 (argument
                   (scalar_variable

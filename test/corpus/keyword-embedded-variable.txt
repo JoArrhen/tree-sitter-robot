@@ -1,16 +1,16 @@
 ================================================================================
-Keyword with slash
+Keyword with variable in name
 ================================================================================
 
 *** Keywords ***
 
-Keyword/With/Slash
+Keyword with ${variable} in name
     Log    Hello
 
 *** Test Cases ***
 
-Test Slash
-    Keyword/With/Slash
+Test Variable Keyword
+    Keyword with ${variable} in name
 
 --------------------------------------------------------------------------------
 
@@ -20,6 +20,9 @@ Test Slash
       (section_header)
       (keyword_definition
         (name
+          (text_chunk)
+          (scalar_variable
+            (variable_name))
           (text_chunk))
         (body
           (statement
@@ -38,4 +41,7 @@ Test Slash
           (statement
             (keyword_invocation
               (keyword
+                (text_chunk)
+                (scalar_variable
+                  (variable_name))
                 (text_chunk)))))))))

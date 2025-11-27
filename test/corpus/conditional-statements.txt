@@ -33,7 +33,8 @@ Test
     (keywords_section
       (section_header)
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (statement
             (if_statement
@@ -44,10 +45,12 @@ Test
               consequence: (block
                 (statement
                   (keyword_invocation
-                    (keyword)))
+                    (keyword
+                      (text_chunk))))
                 (statement
                   (keyword_invocation
-                    (keyword))))))
+                    (keyword
+                      (text_chunk)))))))
           (statement
             (if_statement
               condition: (argument
@@ -57,12 +60,14 @@ Test
               consequence: (block
                 (statement
                   (keyword_invocation
-                    (keyword))))
+                    (keyword
+                      (text_chunk)))))
               alternative: (else_statement
                 consequence: (block
                   (statement
                     (keyword_invocation
-                      (keyword)))))))
+                      (keyword
+                        (text_chunk))))))))
           (statement
             (if_statement
               condition: (argument
@@ -70,26 +75,30 @@ Test
               consequence: (block
                 (statement
                   (keyword_invocation
-                    (keyword))))
+                    (keyword
+                      (text_chunk)))))
               alternative: (elseif_statement
                 condition: (argument
                   (text_chunk))
                 consequence: (block
                   (statement
                     (keyword_invocation
-                      (keyword)))))
+                      (keyword
+                        (text_chunk))))))
               alternative: (elseif_statement
                 condition: (argument
                   (text_chunk))
                 consequence: (block
                   (statement
                     (keyword_invocation
-                      (keyword)))))
+                      (keyword
+                        (text_chunk))))))
               alternative: (else_statement
                 consequence: (block
                   (statement
                     (keyword_invocation
-                      (keyword)
+                      (keyword
+                        (text_chunk))
                       (arguments
                         (argument
                           (text_chunk)
@@ -128,7 +137,8 @@ Test
     (keywords_section
       (section_header)
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (statement
             (if_statement
@@ -139,7 +149,8 @@ Test
               consequence: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (text_chunk))))))
@@ -158,7 +169,8 @@ Test
                       consequence: (block
                         (statement
                           (keyword_invocation
-                            (keyword)
+                            (keyword
+                              (text_chunk))
                             (arguments
                               (argument
                                 (text_chunk)
@@ -169,7 +181,8 @@ Test
                         consequence: (block
                           (statement
                             (keyword_invocation
-                              (keyword)
+                              (keyword
+                                (text_chunk))
                               (arguments
                                 (argument
                                   (text_chunk)))))))))))
@@ -177,7 +190,8 @@ Test
                 consequence: (block
                   (statement
                     (keyword_invocation
-                      (keyword)
+                      (keyword
+                        (text_chunk))
                       (arguments
                         (argument
                           (text_chunk)))))
@@ -195,7 +209,8 @@ Test
                             consequence: (block
                               (statement
                                 (keyword_invocation
-                                  (keyword)
+                                  (keyword
+                                    (text_chunk))
                                   (arguments
                                     (argument
                                       (text_chunk)
@@ -231,7 +246,8 @@ Inline IF/ELSE with assignment
     (keywords_section
       (section_header)
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (statement
             (inline_if_statement
@@ -239,7 +255,8 @@ Inline IF/ELSE with assignment
                 (text_chunk))
               (inline_statement
                 (keyword_invocation
-                  (keyword)
+                  (keyword
+                    (text_chunk))
                   (arguments
                     (argument
                       (text_chunk)))))))
@@ -250,7 +267,8 @@ Inline IF/ELSE with assignment
               (inline_statement
                 (return_statement))))))
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (statement
             (inline_if_statement
@@ -258,16 +276,19 @@ Inline IF/ELSE with assignment
                 (text_chunk))
               (inline_statement
                 (keyword_invocation
-                  (keyword)
+                  (keyword
+                    (text_chunk))
                   (arguments
                     (argument
                       (text_chunk)))))
               (inline_else_statement
                 (inline_statement
                   (keyword_invocation
-                    (keyword))))))))
+                    (keyword
+                      (text_chunk)))))))))
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (statement
             (inline_if_statement
@@ -275,25 +296,30 @@ Inline IF/ELSE with assignment
                 (text_chunk))
               (inline_statement
                 (keyword_invocation
-                  (keyword)))
+                  (keyword
+                    (text_chunk))))
               (inline_elseif_statement
                 (argument
                   (text_chunk))
                 (inline_statement
                   (keyword_invocation
-                    (keyword))))
+                    (keyword
+                      (text_chunk)))))
               (inline_elseif_statement
                 (argument
                   (text_chunk))
                 (inline_statement
                   (keyword_invocation
-                    (keyword))))
+                    (keyword
+                      (text_chunk)))))
               (inline_else_statement
                 (inline_statement
                   (keyword_invocation
-                    (keyword))))))))
+                    (keyword
+                      (text_chunk)))))))))
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (statement
             (variable_assignment

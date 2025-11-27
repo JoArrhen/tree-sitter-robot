@@ -66,6 +66,8 @@ module.exports = grammar({
     [$.except_statement],
     [$.except_statement, $.continuation],
     [$.finally_statement],
+    [$.variable_assignment, $.scalar_variable],
+    [$.variable_assignment, $.keyword],
   ],
 
   rules: {
@@ -124,9 +126,15 @@ module.exports = grammar({
       ),
     keyword_definition: ($) =>
       seq(
-        alias($.text_chunk, $.name),
+        alias($._keyword_definition_name, $.name),
         $._line_break,
         alias($.keyword_definition_body, $.body),
+      ),
+
+    _keyword_definition_name: ($) =>
+      seq(
+        choice($.text_chunk, $.scalar_variable),
+        repeat(seq(optional(" "), choice($.text_chunk, $.scalar_variable))),
       ),
     // prec.right is needed to capture $._empty_line more strongly than $.keywords_section
     keyword_definition_body: ($) =>
@@ -245,15 +253,37 @@ module.exports = grammar({
       ),
 
     variable_assignment: ($) =>
-      seq(
-        seq("${", $.variable_name, "}"),
-        optional(choice("=", " =")),
-        optional($.arguments),
+      prec(
+        1,
+        seq(
+          seq("${", $.variable_name, "}"),
+          optional(choice("=", " =")),
+          optional($.arguments),
+        ),
       ),
 
     keyword_invocation: ($) => seq($.keyword, optional($.arguments)),
 
-    keyword: ($) => /[^\[{][a-zA-Z0-9_:\/]*( [a-zA-Z0-9_:\/]+)*/,
+    keyword: ($) =>
+      seq(
+        choice(alias($._keyword_start_text, $.text_chunk), $.scalar_variable),
+        repeat(seq(optional(" "), choice($.text_chunk, $.scalar_variable))),
+      ),
+
+    _keyword_start_text: ($) =>
+      token(
+        seq(
+          choice(
+            /[^\s$@&{#\[]/, // Can't start with a #, since that would be a comment. Can't start with [ to avoid conflict with settings
+            /[$@&][^{]/,
+            /[^$@&]\{/,
+          ),
+          repeat(choice(/[^\s$@&{]/, /[$@&][^{]/, /[^$@&]\{/)),
+          repeat(
+            seq(" ", repeat1(choice(/[^\s$@&{]/, /[$@&][^{]/, /[^$@&]\{/))),
+          ),
+        ),
+      ),
 
     if_statement: ($) =>
       seq(

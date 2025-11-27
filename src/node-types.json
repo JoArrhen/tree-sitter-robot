@@ -445,6 +445,25 @@
     }
   },
   {
+    "type": "keyword",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "scalar_variable",
+          "named": true
+        },
+        {
+          "type": "text_chunk",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "keyword_definition",
     "named": true,
     "fields": {},
@@ -546,6 +565,25 @@
       "types": [
         {
           "type": "variable_name",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "name",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "scalar_variable",
+          "named": true
+        },
+        {
+          "type": "text_chunk",
           "named": true
         }
       ]
@@ -1080,14 +1118,6 @@
   },
   {
     "type": "extra_text",
-    "named": true
-  },
-  {
-    "type": "keyword",
-    "named": true
-  },
-  {
-    "type": "name",
     "named": true
   },
   {

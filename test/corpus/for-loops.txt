@@ -48,20 +48,23 @@ Example
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
                           (variable_name))))))
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (text_chunk))))))))
           (statement
             (keyword_invocation
-              (keyword)
+              (keyword
+                (text_chunk))
               (arguments
                 (argument
                   (text_chunk)))))))
@@ -103,7 +106,8 @@ Example
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
@@ -124,7 +128,8 @@ Example
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
@@ -202,7 +207,8 @@ Multiple nesting levels
                           body: (block
                             (statement
                               (keyword_invocation
-                                (keyword)
+                                (keyword
+                                  (text_chunk))
                                 (arguments
                                   (argument
                                     (scalar_variable
@@ -237,7 +243,8 @@ Multiple nesting levels
                           consequence: (block
                             (statement
                               (keyword_invocation
-                                (keyword)
+                                (keyword
+                                  (text_chunk))
                                 (arguments
                                   (argument
                                     (scalar_variable
@@ -309,7 +316,8 @@ Multiple loop variables
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
@@ -335,7 +343,8 @@ Multiple loop variables
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
@@ -375,7 +384,8 @@ Also step given
     (keywords_section
       (section_header)
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (keyword_setting
             name: (keyword_setting_name)
@@ -393,13 +403,15 @@ Also step given
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
                           (variable_name)))))))))))
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (keyword_setting
             name: (keyword_setting_name)
@@ -419,13 +431,15 @@ Also step given
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
                           (variable_name)))))))))))
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (keyword_setting
             name: (keyword_setting_name)
@@ -447,7 +461,8 @@ Also step given
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
@@ -479,7 +494,8 @@ FOR-IN-ENUMERATE with two values per iteration
     (keywords_section
       (section_header)
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (statement
             (for_statement
@@ -496,7 +512,8 @@ FOR-IN-ENUMERATE with two values per iteration
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
@@ -505,7 +522,8 @@ FOR-IN-ENUMERATE with two values per iteration
                         (scalar_variable
                           (variable_name)))))))))))
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (statement
             (for_statement
@@ -539,7 +557,8 @@ FOR-IN-ENUMERATE with two values per iteration
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (text_chunk)
@@ -584,7 +603,8 @@ LONGEST mode with custom fill value
     (keywords_section
       (section_header)
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (statement
             (for_statement
@@ -609,7 +629,8 @@ LONGEST mode with custom fill value
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
@@ -621,7 +642,8 @@ LONGEST mode with custom fill value
                         (scalar_variable
                           (variable_name)))))))))))
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (statement
             (for_statement
@@ -642,7 +664,8 @@ LONGEST mode with custom fill value
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
@@ -651,7 +674,8 @@ LONGEST mode with custom fill value
                         (text_chunk)))))
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
@@ -666,7 +690,8 @@ LONGEST mode with custom fill value
                           (variable_name))
                         (text_chunk))))))))))
       (keyword_definition
-        (name)
+        (name
+          (text_chunk))
         (body
           (keyword_setting
             name: (keyword_setting_name)
@@ -702,7 +727,8 @@ LONGEST mode with custom fill value
               body: (block
                 (statement
                   (keyword_invocation
-                    (keyword)
+                    (keyword
+                      (text_chunk))
                     (arguments
                       (argument
                         (scalar_variable
