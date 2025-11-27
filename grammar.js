@@ -239,6 +239,8 @@ module.exports = grammar({
           $.try_statement,
           $.while_statement,
           $.for_statement,
+          $.var_statement,
+          $.group_statement,
           $.continue_statement,
           $.break_statement,
         ),
@@ -458,6 +460,26 @@ module.exports = grammar({
     _for_in_enumerate: ($) => seq(seq("IN ENUMERATE", $.arguments)),
 
     _for_in_zip: ($) => seq(seq("IN ZIP", $.arguments)),
+
+    var_statement: ($) =>
+      prec.right(
+        seq(
+          "VAR",
+          $._separator,
+          field("variable", $.scalar_variable),
+          optional($.arguments),
+        ),
+      ),
+
+    group_statement: ($) =>
+      seq(
+        "GROUP",
+        optional(field("name", $.arguments)),
+        $._line_break,
+        field("body", $.block),
+        $._indentation,
+        "END",
+      ),
 
     continue_statement: ($) => "CONTINUE",
 

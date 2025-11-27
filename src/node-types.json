@@ -246,6 +246,32 @@
     }
   },
   {
+    "type": "group_statement",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      },
+      "name": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "arguments",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "if_statement",
     "named": true,
     "fields": {
@@ -772,6 +798,10 @@
           "named": true
         },
         {
+          "type": "group_statement",
+          "named": true
+        },
+        {
           "type": "if_statement",
           "named": true
         },
@@ -789,6 +819,10 @@
         },
         {
           "type": "try_statement",
+          "named": true
+        },
+        {
+          "type": "var_statement",
           "named": true
         },
         {
@@ -901,6 +935,32 @@
         },
         {
           "type": "finally_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "var_statement",
+    "named": true,
+    "fields": {
+      "variable": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "scalar_variable",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "arguments",
           "named": true
         }
       ]
@@ -1061,6 +1121,10 @@
     "named": false
   },
   {
+    "type": "GROUP",
+    "named": false
+  },
+  {
     "type": "IF",
     "named": false
   },
@@ -1086,6 +1150,10 @@
   },
   {
     "type": "TRY",
+    "named": false
+  },
+  {
+    "type": "VAR",
     "named": false
   },
   {

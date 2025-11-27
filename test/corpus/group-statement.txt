@@ -1,0 +1,47 @@
+================================================================================
+GROUP statement
+================================================================================
+
+*** Keywords ***
+
+Test GROUP
+    GROUP    My Group
+        Log    Inside group
+    END
+    GROUP
+        Log    Anonymous group
+    END
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (section
+    (keywords_section
+      (section_header)
+      (keyword_definition
+        (name
+          (text_chunk))
+        (body
+          (statement
+            (group_statement
+              (arguments
+                (argument
+                  (text_chunk)))
+              (block
+                (statement
+                  (keyword_invocation
+                    (keyword
+                      (text_chunk))
+                    (arguments
+                      (argument
+                        (text_chunk))))))))
+          (statement
+            (group_statement
+              (block
+                (statement
+                  (keyword_invocation
+                    (keyword
+                      (text_chunk))
+                    (arguments
+                      (argument
+                        (text_chunk)))))))))))))

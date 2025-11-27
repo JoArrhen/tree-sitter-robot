@@ -1004,6 +1004,14 @@
             },
             {
               "type": "SYMBOL",
+              "name": "var_statement"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "group_statement"
+            },
+            {
+              "type": "SYMBOL",
               "name": "continue_statement"
             },
             {
@@ -1989,6 +1997,88 @@
               "name": "arguments"
             }
           ]
+        }
+      ]
+    },
+    "var_statement": {
+      "type": "PREC_RIGHT",
+      "value": 0,
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "VAR"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "_separator"
+          },
+          {
+            "type": "FIELD",
+            "name": "variable",
+            "content": {
+              "type": "SYMBOL",
+              "name": "scalar_variable"
+            }
+          },
+          {
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "arguments"
+              },
+              {
+                "type": "BLANK"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "group_statement": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "GROUP"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "FIELD",
+              "name": "name",
+              "content": {
+                "type": "SYMBOL",
+                "name": "arguments"
+              }
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_line_break"
+        },
+        {
+          "type": "FIELD",
+          "name": "body",
+          "content": {
+            "type": "SYMBOL",
+            "name": "block"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_indentation"
+        },
+        {
+          "type": "STRING",
+          "value": "END"
         }
       ]
     },
