@@ -1,0 +1,38 @@
+================================================================================
+Keyword with slash
+================================================================================
+
+*** Keywords ***
+
+Keyword/With/Slash
+    Log    Hello
+
+*** Test Cases ***
+
+Test Slash
+    Keyword/With/Slash
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (section
+    (keywords_section
+      (section_header)
+      (keyword_definition
+        (name)
+        (body
+          (statement
+            (keyword_invocation
+              (keyword)
+              (arguments
+                (argument
+                  (text_chunk)))))))))
+  (section
+    (test_cases_section
+      (section_header)
+      (test_case_definition
+        (name)
+        (body
+          (statement
+            (keyword_invocation
+              (keyword))))))))
