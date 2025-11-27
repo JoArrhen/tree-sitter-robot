@@ -1,0 +1,37 @@
+================================================================================
+Keyword with list arguments
+================================================================================
+
+*** Keywords ***
+
+Keyword With List Args
+    [Arguments]    @{}
+    ...            ${arg1}
+    Log    ${args}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (section
+    (keywords_section
+      (section_header)
+      (keyword_definition
+        (name)
+        (body
+          (keyword_setting
+            (keyword_setting_name)
+            (arguments
+              (argument
+                (list_variable))
+              (continuation
+                (ellipses)
+                (argument
+                  (scalar_variable
+                    (variable_name))))))
+          (statement
+            (keyword_invocation
+              (keyword)
+              (arguments
+                (argument
+                  (scalar_variable
+                    (variable_name)))))))))))

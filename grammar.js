@@ -486,7 +486,7 @@ module.exports = grammar({
       seq("${", optional(" "), $.variable_name, optional(" "), "}"),
 
     list_variable: ($) =>
-      seq("@{", optional(" "), $.variable_name, optional(" "), "}"),
+      seq("@{", optional(" "), optional($.variable_name), optional(" "), "}"),
 
     dictionary_variable: ($) =>
       seq("&{", optional(" "), $.variable_name, optional(" "), "}"),

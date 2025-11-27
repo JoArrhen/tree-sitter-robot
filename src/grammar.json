@@ -1,5 +1,4 @@
 {
-  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
   "name": "robot",
   "rules": {
     "source_file": {
@@ -2083,8 +2082,16 @@
           ]
         },
         {
-          "type": "SYMBOL",
-          "name": "variable_name"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "variable_name"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "CHOICE",
@@ -2388,3 +2395,4 @@
   "inline": [],
   "supertypes": []
 }
+
