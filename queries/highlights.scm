@@ -17,7 +17,7 @@
 (keyword_invocation (keyword) @function.call)
 (ellipses) @punctuation.delimiter
 
-(text_chunk) @string
+(argument (text_chunk) @string)
 (inline_python_expression) @string.special
 [
   (scalar_variable)
