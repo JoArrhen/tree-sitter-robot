@@ -51,5 +51,15 @@
     "tree-sitter": {
       "optional": true
     }
+  },
+  "tree-sitter": {
+    "scope": "source.robot",
+    "file-types": [
+      "robot"
+    ],
+    "injection-regex": "robot",
+    "highlights": [
+      "queries/highlights.scm"
+    ]
   }
 }
