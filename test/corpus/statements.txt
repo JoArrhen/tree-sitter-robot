@@ -201,9 +201,9 @@ Test Keyword
           (statement
             (variable_assignment
               (variable_name)
+              (keyword
+                (text_chunk))
               (arguments
-                (argument
-                  (text_chunk))
                 (argument
                   (text_chunk))
                 (argument
@@ -212,9 +212,8 @@ Test Keyword
           (statement
             (variable_assignment
               (variable_name)
-              (arguments
-                (argument
-                  (text_chunk))))))))))
+              (keyword
+                (text_chunk)))))))))
 
 ================================================================================
 Inline Python evaluation

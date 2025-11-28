@@ -260,7 +260,13 @@ module.exports = grammar({
         seq(
           seq("${", $.variable_name, "}"),
           optional(choice("=", " =")),
-          optional($.arguments),
+          optional(
+            seq(
+              $._separator,
+              $.keyword,
+              optional($.arguments),
+            ),
+          ),
         ),
       ),
 

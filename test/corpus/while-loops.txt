@@ -21,9 +21,9 @@ Example
           (statement
             (variable_assignment
               (variable_name)
+              (keyword
+                (text_chunk))
               (arguments
-                (argument
-                  (text_chunk))
                 (argument
                   (text_chunk)))))
           (statement
@@ -37,9 +37,8 @@ Example
                 (statement
                   (variable_assignment
                     (variable_name)
-                    (arguments
-                      (argument
-                        (text_chunk)))))))))))))
+                    (keyword
+                      (text_chunk))))))))))))
 
 ================================================================================
 With arguments
@@ -126,9 +125,9 @@ Nesting WHILE
           (statement
             (variable_assignment
               (variable_name)
+              (keyword
+                (text_chunk))
               (arguments
-                (argument
-                  (text_chunk))
                 (argument
                   (text_chunk)))))
           (statement
@@ -142,9 +141,9 @@ Nesting WHILE
                 (statement
                   (variable_assignment
                     (variable_name)
+                    (keyword
+                      (text_chunk))
                     (arguments
-                      (argument
-                        (text_chunk))
                       (argument
                         (scalar_variable
                           (variable_name))))))
@@ -159,9 +158,9 @@ Nesting WHILE
                       (statement
                         (variable_assignment
                           (variable_name)
+                          (keyword
+                            (text_chunk))
                           (arguments
-                            (argument
-                              (text_chunk))
                             (argument
                               (scalar_variable
                                 (variable_name))
@@ -176,9 +175,9 @@ Nesting WHILE
                       (statement
                         (variable_assignment
                           (variable_name)
+                          (keyword
+                            (text_chunk))
                           (arguments
-                            (argument
-                              (text_chunk))
                             (argument
                               (scalar_variable
                                 (variable_name))
@@ -188,9 +187,9 @@ Nesting WHILE
                         (statement
                           (variable_assignment
                             (variable_name)
+                            (keyword
+                              (text_chunk))
                             (arguments
-                              (argument
-                                (text_chunk))
                               (argument
                                 (scalar_variable
                                   (variable_name))

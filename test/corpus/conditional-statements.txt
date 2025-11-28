@@ -324,9 +324,9 @@ Inline IF/ELSE with assignment
           (statement
             (variable_assignment
               (variable_name)
+              (keyword
+                (text_chunk))
               (arguments
-                (argument
-                  (text_chunk))
                 (argument
                   (text_chunk))
                 (argument

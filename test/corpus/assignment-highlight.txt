@@ -20,8 +20,8 @@ Test Assignment
           (statement
             (variable_assignment
               (variable_name)
+              (keyword
+                (text_chunk))
               (arguments
-                (argument
-                  (text_chunk))
                 (argument
                   (text_chunk))))))))))
