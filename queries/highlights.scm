@@ -11,11 +11,13 @@
 ] @keyword
 
 (variable_definition (variable_name) @variable)
-(var_statement "VAR" @keyword)
+(var_statement "VAR" @keyword.conditional)
 (keyword_definition (name) @function)
 (test_case_definition (name) @function)
 
 (keyword_invocation (keyword) @function.call)
+(variable_assignment (arguments (argument (text_chunk) @function.call) .))
+
 (ellipses) @punctuation.delimiter
 
 (argument (text_chunk) @string)
