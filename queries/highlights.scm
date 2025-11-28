@@ -15,13 +15,11 @@
 (keyword_definition (name) @function)
 (test_case_definition (name) @function)
 
-(keyword (text_chunk) @function.call)
+(keyword_invocation (keyword) @function.call)
 
 (ellipses) @punctuation.delimiter
 
-(argument (text_chunk) @tag)
-(text_chunk) @string
-
+(argument (text_chunk) @parameter)
 (inline_python_expression) @string.special
 [
   (scalar_variable)
