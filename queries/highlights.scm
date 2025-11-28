@@ -20,7 +20,7 @@
 
 (ellipses) @punctuation.delimiter
 
-(argument (text_chunk) @string)
+(argument (text_chunk) @exception)
 (inline_python_expression) @string.special
 [
   (scalar_variable)
