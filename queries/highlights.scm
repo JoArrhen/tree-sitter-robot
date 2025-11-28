@@ -11,6 +11,7 @@
 ] @keyword
 
 (variable_definition (variable_name) @variable)
+(var_statement "VAR" @keyword)
 (keyword_definition (name) @function)
 (test_case_definition (name) @function)
 
